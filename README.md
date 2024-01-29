@@ -228,10 +228,12 @@ file : Tree.hs
 - With the previous function, build the ASTree.
 ```
 function : buildAST
-prototype : buildAST ([String, String] -> ASTree)
+prototype : buildAST ([String, String]) -> ASTree
 file : Tree.hs
 ```
 ```
+ghci> buildAST (["+", "-"], ["1", "2", "3"])
+1 + 2 - 3
 ```
 ## Final expression program
 Wow ! You are here ? I'm really chokbar to be honest. \
