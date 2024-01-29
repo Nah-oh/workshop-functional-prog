@@ -142,12 +142,12 @@ ghci> filterArr (\ x -> x `mod` 2 == 0) [1, 2, 3, 4, 5]
 ### Step 7 - parseLine
 ```
 function : parseLine
-prototype : parseLine :: [a] -> [a]
+prototype : parseLine :: [String] -> ([String, String])
 file : Parse.hs
 ```
 ```
-ghci> parseLine ["1", "+", "2", "-", "15", "/", "42"]
-["+","-","/","1","2","15","42"]
+``ghci> parseLine ["1", "+", "2", "-", "3"]
+(["+","-"],["1","2","3"])
 ```
 - Perhaps previous functions are useful for this one...
 
@@ -228,7 +228,7 @@ file : Tree.hs
 - With the previous function, build the ASTree.
 ```
 function : buildAST
-prototype : buildAST ([String, String]) -> ASTree
+prototype : buildAST :: ([String, String]) -> ASTree
 file : Tree.hs
 ```
 ```
