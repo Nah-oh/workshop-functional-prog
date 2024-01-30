@@ -228,7 +228,7 @@ file : Tree.hs
 - With the previous function, build the ASTree.
 ```
 function : buildAST
-prototype : buildAST :: ([String, String]) -> ASTree
+prototype : buildAST :: ([String], [String]) -> ASTree
 file : Tree.hs
 ```
 ```

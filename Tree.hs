@@ -18,7 +18,7 @@ buildAST (ops, vals) = buildExprList ops (mapValues vals)
 buildExprList :: [String] -> [ASTree] -> ASTree
 buildExprList [] [expr] = expr
 buildExprList (op:ops) (v1:v2:vs) = buildExprList ops (buildExpr v1 op v2 : vs)
-buildExprList _ _ = error "Nombre d'opérateurs incorrect ou insuffisant"
+buildExprList _ _ = error "Invalid operand numbers"
 
 mapValues :: [String] -> [ASTree]
 mapValues = map (Value . read)
